@@ -16,15 +16,17 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
+        <div className="home-container">
           <div>
             <Link to="/">Home</Link>
           </div>
-          <button onClick={()=>{setLoginSwitch(true);setSignUpSwitch(false)}}>Login</button>
-          <button onClick={()=>{setLoginSwitch(false);setSignUpSwitch(true)}}>Sign Up</button>
-          {loginSwitch ? <LogIn /> : null}
-          {signUpSwitch ? <SignUp /> : null}
-        </nav>
+          <div className="login-button-container">
+            <button onClick={()=>{setLoginSwitch(true);setSignUpSwitch(false)}}>Login</button>
+            <button onClick={()=>{setLoginSwitch(false);setSignUpSwitch(true)}}>Sign Up</button>
+            {loginSwitch ? <LogIn /> : null}
+            {signUpSwitch ? <SignUp /> : null}
+          </div>
+        </div>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
