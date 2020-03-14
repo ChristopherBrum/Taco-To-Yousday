@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import LogIn from './components/LogIn.js';
-import SignUp from './components/SignUp.js';
+import Login from './components/Login/Login.js';
+import SignUp from './components/SignUp/SignUp.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,20 +10,21 @@ import {
 } from "react-router-dom";
 
 function App() {
+
   const [loginSwitch, setLoginSwitch] = useState(false)
   const [signUpSwitch, setSignUpSwitch] = useState(false)
-
+  
   return (
     <Router>
       <div>
         <div className="home-container">
           <div>
             <Link to="/">Home</Link>
-          </div>
+          </div> 
           <div className="login-button-container">
             <button onClick={()=>{setLoginSwitch(true);setSignUpSwitch(false)}}>Login</button>
             <button onClick={()=>{setLoginSwitch(false);setSignUpSwitch(true)}}>Sign Up</button>
-            {loginSwitch ? <LogIn /> : null}
+            {loginSwitch ? <Login /> : null}
             {signUpSwitch ? <SignUp /> : null}
           </div>
         </div>
@@ -41,10 +42,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function Navbar() {
-
 }
 
 export default App;

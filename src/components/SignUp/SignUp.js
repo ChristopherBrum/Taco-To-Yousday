@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './LogIn.css';
+import './SignUp.css';
 
-export default function LogIn(){
+export default function SignUp(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -12,6 +12,14 @@ export default function LogIn(){
 return(
     <div>
         <form>
+            <label>
+                First Name:
+                <input type="text" name="name" />
+            </label>
+            <label>
+                Last Name:
+                <input type="text" name="name" />
+            </label>
             <label>
                 Email:
                 <input type="text" name="name" />
