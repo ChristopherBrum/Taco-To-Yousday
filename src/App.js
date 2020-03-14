@@ -22,18 +22,22 @@ function App() {
 
   return (
     <Router>
-      <Container fluid>
-        <Row>
-          <Col><Link to="/">Home</Link></Col>
-          <Col xs={8}>Spacing</Col>
-          <Col>Menu</Col>
-        </Row> 
-        <Container fluid="sm">            
-          <Button onClick={()=>{setLoginSwitch(true);setSignUpSwitch(false)}}>Login</Button>
-          <Button onClick={()=>{setLoginSwitch(false);setSignUpSwitch(true)}}>Sign Up</Button>
-          {loginSwitch ? <Login /> : null}
-          {signUpSwitch ? <SignUp /> : null}
-        </Container>
+      <div className="main-container">
+        <div className="nav-bar">
+          <div className="home-link"><Link id="home-logo" to="/">HOME</Link></div>
+          <div className="home-menu">MENU</div>
+        </div>
+        <div className="title-container">
+          <h1 className="title">Taco to Yousday</h1>
+        </div>
+        <div className="main-page-container">
+          <div className="login-container">            
+            <button className="sign-up-button" onClick={()=>{setLoginSwitch(true);setSignUpSwitch(false)}}>Login</button>
+            <button className="log-in-button" onClick={()=>{setLoginSwitch(false);setSignUpSwitch(true)}}>Sign Up</button>
+            {loginSwitch ? <Login /> : null}
+            {signUpSwitch ? <SignUp /> : null}
+          </div>
+        </div>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
@@ -45,7 +49,7 @@ function App() {
             {/* <Home /> */}
           </Route>
         </Switch>
-      </Container>
+      </div>
     </Router>
   );
 }

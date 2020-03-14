@@ -29,7 +29,13 @@ return(
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-            
+
+            <Form.Check 
+                type="switch"
+                id="custom-switch"
+                label="Remember Email"
+            />
+
             <Button variant="primary" type="submit">
                 Submit
             </Button>
