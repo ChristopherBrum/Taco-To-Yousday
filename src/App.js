@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import './App.css';
 import Login from './components/Login/Login.js';
 import SignUp from './components/SignUp/SignUp.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,21 +19,21 @@ function App() {
 
   const [loginSwitch, setLoginSwitch] = useState(false)
   const [signUpSwitch, setSignUpSwitch] = useState(false)
-  
+
   return (
     <Router>
-      <div>
-        <div className="home-container">
-          <div>
-            <Link to="/">Home</Link>
-          </div> 
-          <div className="login-button-container">
-            <button onClick={()=>{setLoginSwitch(true);setSignUpSwitch(false)}}>Login</button>
-            <button onClick={()=>{setLoginSwitch(false);setSignUpSwitch(true)}}>Sign Up</button>
-            {loginSwitch ? <Login /> : null}
-            {signUpSwitch ? <SignUp /> : null}
-          </div>
-        </div>
+      <Container fluid>
+        <Row>
+          <Col><Link to="/">Home</Link></Col>
+          <Col xs={8}>Spacing</Col>
+          <Col>Menu</Col>
+        </Row> 
+        <Container fluid="sm">            
+          <Button onClick={()=>{setLoginSwitch(true);setSignUpSwitch(false)}}>Login</Button>
+          <Button onClick={()=>{setLoginSwitch(false);setSignUpSwitch(true)}}>Sign Up</Button>
+          {loginSwitch ? <Login /> : null}
+          {signUpSwitch ? <SignUp /> : null}
+        </Container>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
@@ -39,7 +45,7 @@ function App() {
             {/* <Home /> */}
           </Route>
         </Switch>
-      </div>
+      </Container>
     </Router>
   );
 }
