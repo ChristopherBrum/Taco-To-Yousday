@@ -1,7 +1,7 @@
 .main-container {
-  height: 107vh;
+  height: 112vh;
   width: auto;
-  background-image: linear-gradient(rgb(255, 186, 39), rgb(254, 139, 16));
+  background-image: linear-gradient(rgb(255, 186, 39), rgb(254, 119, 16));
 }
 
 .nav-bar {
@@ -33,9 +33,10 @@
 
 .title-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 36vh;
 }
 
 .title {
@@ -44,6 +45,15 @@
   font-size: 30vh;
   color: black;
   text-align: center;
+}
+
+.sub-title {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 6vh;
+  color: black;
+  text-align: center;
+  margin-top: -4vh;
 }
 
 .main-page-container {
@@ -60,7 +70,7 @@
   display: flex;
   justify-content: center;
   border: 2px solid black;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   align-items: flex-end;
   background-color: rgba(255, 255, 255, 0.5);
   /* margin-left: 35%;

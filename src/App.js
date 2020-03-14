@@ -28,7 +28,12 @@ function App() {
           <div className="home-menu">MENU</div>
         </div>
         <div className="title-container">
-          <h1 className="title">Taco to Yousday</h1>
+          <div>
+            <h1 className="title">Taco to Yousday</h1>
+          </div>
+          <div>
+            <h3 className="sub-title">Let Taco Tuesday Come to You!</h3>
+          </div>
         </div>
         <div className="main-page-container">
           <div className="login-container">            
