@@ -1,4 +1,4 @@
-.main-container {
+/* .main-container {
   height: 112vh;
   width: auto;
   background-image: linear-gradient(rgb(255, 186, 39), rgb(254, 119, 16));
@@ -66,35 +66,22 @@
 
 .login-container {
   width: 250px;
-  height: 75px;
+  height: 80px;
   display: flex;
   justify-content: center;
   border: 2px solid black;
-  /* border-radius: 5px; */
-  align-items: flex-end;
-  background-color: rgba(255, 255, 255, 0.5);
-  /* margin-left: 35%;
-  margin-top: 15%; */
+  align-items: center;
+  background-color: rgba(255, 255, 255);
 }
 
 button.sign-up-button {
   margin-right: 1vh;
   height: 40px;
-  width: 80px;
-  background-color: white;
-  margin-bottom: 15px;
-  border: 2px solid black;
-  /* border-radius: 5px; */
-  font-weight: bold;
+  width: 85px;
 }
 
 button.log-in-button {
   margin-left: 1vh;
   height: 40px;
-  width: 80px;
-  background-color: white;
-  margin-bottom: 15px;
-  border: 2px solid black;
-  /* border-radius: 5px; */
-  font-weight: bold;
-}
+  width: 85px;
+} */
