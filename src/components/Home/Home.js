@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fire from '../../config/Fire.js';
 import Tacos from '../Taco/TacoFeed.js';
+import './Home.css'
 
 class Home extends Component {
   constructor(props) {
@@ -15,9 +16,10 @@ class Home extends Component {
   render() {
     return(
       <div>
-        <h1>Taco To Yousday</h1>
-        <h5>Bringing Taco Tuesday to you</h5>
-        <button onClick={this.logout}>Log Out</button>
+        <div className="home-title-container">
+          <h1>Taco To Yousday</h1>
+          <button onClick={this.logout}>Log Out</button>
+        </div>
         <Tacos />
       </div>
     );
