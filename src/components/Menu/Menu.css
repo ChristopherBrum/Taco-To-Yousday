@@ -2,4 +2,18 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-: space-between;
+}
+
+.menu-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-title {
+  text-align: center;
+}
+
+.size-description {
+  font-size: 10px;
 }

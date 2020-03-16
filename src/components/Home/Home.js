@@ -24,9 +24,10 @@ class Home extends Component {
         </div>
         <div id="menu-container">
           <Menu />
-          <Button onClick={this.logout}>Log Out</Button>
+          <div className="menu-button-container">
+            <Button onClick={this.logout}>Log Out</Button>
+          </div>
         </div>
-
       </div>
     );
   }
