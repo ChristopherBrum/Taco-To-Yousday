@@ -4,6 +4,8 @@ import './App.css';
 import Home from './components/Home/Home.js';
 import Login from './components/Login/Login.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
 
 class App extends Component {
   constructor(props){
@@ -30,6 +32,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar id="nav-props" bg="light">
+          <Navbar.Brand href="#home">Taco To Yousday</Navbar.Brand>
+        </Navbar> 
         {this.state.user ? (<Home />) : (<Login />)}
       </div>
     );

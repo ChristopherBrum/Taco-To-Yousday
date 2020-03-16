@@ -1,4 +1,19 @@
+.taco-container {
+  background-image: linear-gradient(#3ca55c,#b5ac49);
+  display: flex;
+}
+
 .home-title-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+#menu-container {
+  width: 35vh;
+  height: 40vh;
+  background-color: rgb(255, 255, 255, 0.5);
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 20px;
 }

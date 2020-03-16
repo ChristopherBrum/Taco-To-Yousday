@@ -1,3 +1,20 @@
-.form-container {
-  
+.landing-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#3ca55c,#b5ac49);
+}
+
+#login-form-container {
+  height: 16rem;
+  width: 20rem;
+  border: .02px solid rgba(128, 128, 128, 0.25);
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
 }
