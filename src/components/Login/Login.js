@@ -1,8 +1,9 @@
-import React, { Component, setState } from 'react';
+import React, { Component } from 'react';
 import fire from '../../config/Fire.js';
 import './Login.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+// import background from '../taco-banner-meteorshower.png';
 
 class Login extends Component {
     constructor(props) {

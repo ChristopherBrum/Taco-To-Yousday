@@ -11,53 +11,8 @@ function Menu() {
 
   return(
     <div className="menu-container">
-      <h5 className="menu-title">Taco Menu</h5>
+      <h5 className="menu-title">Order Menu</h5>
       <Accordion>
-      <Card>
-        <Card.Header>
-          <Accordion.Toggle as={Button} variant="link" eventKey="0">Protein Preferences</Accordion.Toggle>
-        </Card.Header>
-        <Accordion.Collapse eventKey="0">
-          <Card.Body>
-            <Form>
-              <Form.Group as={Row} controlId="formHorizontalEmail"> 
-                <fieldset>
-                  <Form.Group as={Row}>
-                    <Form.Label as="legend" column sm={2}>
-                    </Form.Label>
-                    <Col sm={10}>
-                      <Form.Check
-                        type="radio"
-                        label="Pollo"
-                        name="formHorizontalRadios"
-                        id="formHorizontalRadios1"
-                      />
-                      <Form.Check
-                        type="radio"
-                        label="Carne Asada"
-                        name="formHorizontalRadios"
-                        id="formHorizontalRadios2"
-                      />
-                      <Form.Check
-                        type="radio"
-                        label="Mariscos"
-                        name="formHorizontalRadios"
-                        id="formHorizontalRadios3"
-                      />
-                      <Form.Check
-                        type="radio"
-                        label="Vegetariana"
-                        name="formHorizontalRadios"
-                        id="formHorizontalRadios2"
-                      />
-                    </Col>
-                  </Form.Group>
-                </fieldset>
-              </Form.Group>
-            </Form>
-          </Card.Body>
-        </Accordion.Collapse>
-      </Card>
       <Card>
         <Card.Header>
           <Accordion.Toggle as={Button} variant="link" eventKey="1">Appetite Level</Accordion.Toggle>

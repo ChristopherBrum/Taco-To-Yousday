@@ -1,7 +1,7 @@
 #taco-feed-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 5px;
+  margin: 10px;
 }
 
 #card-footer {

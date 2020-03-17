@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Taco.css';
-import { render } from '@testing-library/react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Container from 'react-bootstrap/Container';
-
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 function TacoFeed() {
   const [tacos, setTacos] = useState([]);
@@ -18,7 +20,6 @@ function TacoFeed() {
       .then(response => response.json())
       .then(data => setTacos(data));
   }
-
 
   function getImage(uri) {
     if (uri === "https://i.imgur.com/p7NGATP.jpg"){
@@ -40,6 +41,10 @@ function TacoFeed() {
     return array;
   }
 
+  const getPollo = () => {
+    
+  }
+
   const tacoInfo = () => 
     shuffleTacos(tacos).map(taco => (
       <div id="taco-feed-container" key={taco.id}>
@@ -56,10 +61,25 @@ function TacoFeed() {
           </Card>
         </CardGroup>
       </div>
-    ));
+    )
+  );
+
+  console.log({tacos})
 
   return (
     <div>
+      <div className="filter-button-container">
+        <h4 id="taco-filter-title">Tacos available in your area</h4>
+        <ButtonGroup>
+          <DropdownButton as={ButtonGroup} title="Proteins" id="bg-nested-dropdown">
+            <Dropdown.Item eventKey="1">Pollo</Dropdown.Item>
+            <Dropdown.Item eventKey="2">Carne Asada</Dropdown.Item>
+            <Dropdown.Item eventKey="3">Mariscos</Dropdown.Item>
+            <Dropdown.Item eventKey="4">Vegetariana</Dropdown.Item>
+            <Dropdown.Item eventKey="5">All</Dropdown.Item>
+          </DropdownButton>
+        </ButtonGroup>
+      </div>
       <Container id="taco-feed-container" >{tacoInfo()}</Container>
     </div>
   );

@@ -4,7 +4,6 @@ import Tacos from '../Taco/TacoFeed.js';
 import Menu from '../Menu/Menu.js';
 import './Home.css'
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
 
 class Home extends Component {
   constructor(props) {
