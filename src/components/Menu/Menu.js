@@ -1,18 +1,18 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';  
-import Row from 'react-bootstrap/Row';  
-import Col from 'react-bootstrap/Col';  
-import Card from 'react-bootstrap/Card';  
-import Accordion from 'react-bootstrap/Accordion';  
-import Button from 'react-bootstrap/Button';  
+// import Form from 'react-bootstrap/Form';  
+// import Row from 'react-bootstrap/Row';  
+// import Col from 'react-bootstrap/Col';  
+// import Card from 'react-bootstrap/Card';  
+// import Accordion from 'react-bootstrap/Accordion';  
+// import Button from 'react-bootstrap/Button';  
 import './Menu.css';
 
 function Menu() {
 
   return(
     <div className="menu-container">
-      <h5 className="menu-title">Order Menu</h5>
-      <Accordion>
+      <h5 className="menu-title">Order Status</h5>
+      {/* <Accordion>
       <Card>
         <Card.Header>
           <Accordion.Toggle as={Button} variant="link" eventKey="1">Appetite Level</Accordion.Toggle>
@@ -107,7 +107,7 @@ function Menu() {
             </Card.Body>
           </Accordion.Collapse>
         </Card> 
-      </Accordion>
+      </Accordion> */}
     </div>
   );
 }

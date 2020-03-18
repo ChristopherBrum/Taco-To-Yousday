@@ -42,8 +42,8 @@ class Login extends Component {
         return (
             <div className="landing-container">
                 <div className="bg-overlay">
-                    <img src={title} className="title" ></img>
-                    <img src={subtitle} className="subtitle" ></img>
+                    <img src={title} className="title" alt="website logo"></img>
+                    <img src={subtitle} className="subtitle" alt="website subtitle"></img>
                     <Form id="login-form-container">
                         <Form.Group controlId="formBasicEmail"> 
                             <Form.Label htmlFor="exampleInputEmail1">Email address</Form.Label>

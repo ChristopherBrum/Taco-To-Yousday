@@ -7,3 +7,12 @@
 #card-footer {
   align-content: flex-end;
 }
+
+#bg-nested-dropdown {
+  margin: 0 -7vh;
+}
+
+#filter-button-wrap {
+  margin-right: -5vh;
+}
+

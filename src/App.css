@@ -1,7 +1,13 @@
-#nav-props {
+nav#nav-props.bg-light.navbar.navbar-expand.navbar-light {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav#nav-props-logged.bg-light.navbar.navbar-expand.navbar-light {
+  height: 50px;
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
 .navbar-title {
@@ -13,3 +19,28 @@
   margin-bottom: -30px;
   margin-right: 5px;
 }
+
+.taco-a {
+  height: 60px;
+  margin: -13px 0;
+}
+
+.taco-b {
+  height: 80px;
+  margin: -23px 0;
+}
+
+.taco-c {
+  height: 100px;
+  margin: -33px 0;
+}
+
+div#nav-props {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
