@@ -7,8 +7,9 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
-function TacoFeed(props) {
+function TacoFeed() {
   const [ tacos, setTacos ] = useState([]);
+  const [ origTacos, setOrigTacos ] = useState([])
  
   useEffect(() => {
     getAllTacos();
@@ -17,7 +18,7 @@ function TacoFeed(props) {
   function getAllTacos() {
     fetch('https://tacos-api-host.herokuapp.com/')
       .then(response => response.json())
-      .then(data => setTacos(data));
+      .then(data => {setTacos(data); setOrigTacos(data)});
   }
 
   function getImage(uri) {
@@ -43,7 +44,7 @@ function TacoFeed(props) {
   const listTacos = () => 
     shuffleTacos(tacos).map(taco => (
       <div id="taco-feed-container" key={taco.id}>
-        <CardGroup style={{ width: '18rem' }}>
+        <CardGroup id="cards" style={{ width: '18rem' }}>
           <Card>
             <Card.Img variant="top" src={getImage(taco.uri)} />
             <Card.Body>
@@ -57,41 +58,55 @@ function TacoFeed(props) {
         </CardGroup>
       </div>
     )
-  );
+  )
 
-  function filterTacos() {
-    
+  function filterTacos(arr) {
+    setTacos(origTacos)
+    if (arr.length === 0) {
+      setTacos(origTacos)
+    } else {
+      var filterTacos = origTacos.filter(taco => arr.includes(taco.id))
+      setTacos(filterTacos)
+    }
+  }
+
+  function filterAppetite() {
+
+  }
+
+  function filterFrequency() {
+
   }
 
   return (
     <div>
       <div className="filter-button-container">
-        <h4 className="taco-filter-title">These tacos are available in your area:</h4>
+        <h5 className="taco-filter-title">Choose some tacos from the selection below!</h5>
         <div id="filter-button-wrap">
           <ButtonGroup>
             <DropdownButton as={ButtonGroup} title="Proteins" id="bg-nested-dropdown">
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="1">Pollo</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="2">Carne Asada</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="3">Mariscos</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="4">Vegetariana</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="5">All</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterTacos([2]) } eventKey="1">Pollo</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterTacos([7]) } eventKey="2">Carne Asada</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterTacos([3,4,5]) } eventKey="3">Mariscos</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterTacos([1,6]) } eventKey="4">Vegetariana</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterTacos([]) } eventKey="5">All</Dropdown.Item>
             </DropdownButton>
           </ButtonGroup>
           <ButtonGroup>
             <DropdownButton as={ButtonGroup} title="Appetite" id="bg-nested-dropdown">
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="1">Pequeño: 2 Tacos for $3.99</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="2">Medio: 3 Tacos for $4.99</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="3">Grande: 4 Tacos for $5.99</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="4">Gordi: 5 Tacos for $6.99</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="5">Familia: 10 Tacos for $12.99</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="1">Pequeño: 2 Tacos for $3.99</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="2">Medio: 3 Tacos for $4.99</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="3">Grande: 4 Tacos for $5.99</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="4">Gordi: 5 Tacos for $6.99</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="5">Familia: 10 Tacos for $12.99</Dropdown.Item>
             </DropdownButton>
           </ButtonGroup>        
           <ButtonGroup>
             <DropdownButton as={ButtonGroup} title="Frequency" id="bg-nested-dropdown">
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="1">Every Tuesday!</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="2">Everyother Tuesday</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="3">Once a Month</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterTacos() } eventKey="4">Just next Tuesday</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterFrequency() } eventKey="1">Every Tuesday!</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterFrequency() } eventKey="2">Everyother Tuesday</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterFrequency() } eventKey="3">Once a Month</Dropdown.Item>
+              <Dropdown.Item onClick={ () => filterFrequency() } eventKey="4">Just next Tuesday</Dropdown.Item>
             </DropdownButton>
           </ButtonGroup>
         </div>

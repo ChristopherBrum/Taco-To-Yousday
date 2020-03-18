@@ -16,3 +16,12 @@
   margin-right: -5vh;
 }
 
+#cards {
+  box-shadow: 0 2px 4px 2px;
+}
+
+.taco-filter-title {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
