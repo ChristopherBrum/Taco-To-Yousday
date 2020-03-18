@@ -79,7 +79,7 @@ function TacoFeed() {
   }
 
   return (
-    <div>
+    <div className="main-taco-cont">
       <div className="filter-button-container">
         <h5 className="taco-filter-title">Choose some tacos from the selection below!</h5>
         <div id="filter-button-wrap">
