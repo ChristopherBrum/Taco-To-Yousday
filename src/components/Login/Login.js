@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import fire from '../../config/Fire.js';
 import './Login.css';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import title from '../TacoToYousday-font.png';
 import subtitle from '../slogan-font.png';
+import about from '../what-is-TTY.png';
 
 class Login extends Component {
     constructor(props) {
@@ -44,6 +45,7 @@ class Login extends Component {
                 <div className="bg-overlay">
                     <img src={title} className="title" alt="website logo"></img>
                     <img src={subtitle} className="subtitle" alt="website subtitle"></img>
+                    <img src={about} className="about" alt="link to what TTY is about"></img>
                     <Form id="login-form-container">
                         <Form.Group controlId="formBasicEmail"> 
                             <Form.Label htmlFor="exampleInputEmail1">Email address</Form.Label>

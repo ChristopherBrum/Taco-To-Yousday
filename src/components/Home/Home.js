@@ -25,10 +25,15 @@ class Home extends Component {
         <div>
           <div id="menu-container">
             <Menu />
-              <Button className="logout-button" onClick={this.logout}>Log Out</Button>
           </div>
           <div id="address-container">
             <Address />
+          </div>
+          <div id="settings-container">
+            <Button className="logout-button">FAQ</Button>
+            <Button className="logout-button">About Taco To Yousday</Button>
+            <Button className="logout-button">Contact</Button>
+            <Button className="logout-button" onClick={this.logout}>Log Out</Button>
           </div>
         </div>
       </div>

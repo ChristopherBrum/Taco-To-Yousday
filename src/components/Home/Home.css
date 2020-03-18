@@ -11,7 +11,7 @@
 
 #menu-container {
   width: 60vh;
-  height: 50vh;
+  height: 60vh;
   background-color: rgb(255, 255, 255, 0.5);
   margin-top: 20px;
   margin-bottom: 10px;
@@ -53,6 +53,21 @@
 #address-container {
   width: 60vh;
   height: 100vh;
+  background-color: rgb(255, 255, 255, 0.5);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#settings-container {
+  width: 60vh;
+  height: 40vh;
   background-color: rgb(255, 255, 255, 0.5);
   margin-top: 20px;
   margin-bottom: 10px;

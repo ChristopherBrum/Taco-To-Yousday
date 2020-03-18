@@ -18,3 +18,14 @@
 .size-description {
   font-size: 10px;
 }
+
+#taco-nested-dropdown {
+  width: 325px;
+  margin: 5px;
+  background-color: white;
+  color: black;
+}
+
+#order-total {
+  margin-top: 4%; 
+}

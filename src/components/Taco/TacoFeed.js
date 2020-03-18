@@ -95,23 +95,6 @@ function TacoFeed() {
               <Dropdown.Item onClick={ () => filterTacos([]) } eventKey="5">All</Dropdown.Item>
             </DropdownButton>
           </ButtonGroup>
-          <ButtonGroup>
-            <DropdownButton as={ButtonGroup} title="Appetite" id="bg-nested-dropdown">
-              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="1">Pequeño: 2 Tacos for $3.99</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="2">Medio: 3 Tacos for $4.99</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="3">Grande: 4 Tacos for $5.99</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="4">Gordi: 5 Tacos for $6.99</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterAppetite() } eventKey="5">Familia: 10 Tacos for $12.99</Dropdown.Item>
-            </DropdownButton>
-          </ButtonGroup>        
-          <ButtonGroup>
-            <DropdownButton as={ButtonGroup} title="Frequency" id="bg-nested-dropdown">
-              <Dropdown.Item onClick={ () => filterFrequency() } eventKey="1">Every Tuesday!</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterFrequency() } eventKey="2">Everyother Tuesday</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterFrequency() } eventKey="3">Once a Month</Dropdown.Item>
-              <Dropdown.Item onClick={ () => filterFrequency() } eventKey="4">Just next Tuesday</Dropdown.Item>
-            </DropdownButton>
-          </ButtonGroup>
         </div>
       </div>
       <Container id="taco-feed-container" >{listTacos()}</Container>
