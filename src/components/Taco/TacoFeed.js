@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Container from 'react-bootstrap/Container';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
@@ -48,11 +49,13 @@ function TacoFeed() {
           <Card>
             <Card.Img variant="top" src={getImage(taco.uri)} />
             <Card.Body>
-              <Card.Title>{taco.title}</Card.Title>
-              <Card.Text>{taco.description}</Card.Text>
-              <Card.Footer id="card-footer" >
-                <small className="text-muted">Tags: </small>
-              </Card.Footer>
+              <div>
+                <Card.Title>{taco.title}</Card.Title>
+                <Card.Text>{taco.description}</Card.Text>
+              </div>
+              <div>
+                <Button>I want this taco!</Button>
+              </div>
             </Card.Body>
           </Card>
         </CardGroup>

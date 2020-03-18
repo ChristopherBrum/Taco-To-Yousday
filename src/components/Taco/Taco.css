@@ -29,3 +29,10 @@
   align-items: center;
   margin-top: 5px;
 }
+
+.card-body {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
