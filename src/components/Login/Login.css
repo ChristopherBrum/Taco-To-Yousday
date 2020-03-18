@@ -19,3 +19,23 @@
   display: flex;
   justify-content: center;
 }
+
+.bg-overlay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../TTY-Background.png');
+  background-size: cover;
+}
+
+.title {
+  width: 60%;
+}
+
+.subtitle {
+  width: 30%;
+  margin-top: -50px;
+}

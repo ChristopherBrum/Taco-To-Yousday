@@ -3,7 +3,8 @@ import fire from '../../config/Fire.js';
 import './Login.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-// import background from '../taco-banner-meteorshower.png';
+import title from '../TacoToYousday-font.png';
+import subtitle from '../slogan-font.png';
 
 class Login extends Component {
     constructor(props) {
@@ -40,25 +41,29 @@ class Login extends Component {
     render() {
         return (
             <div className="landing-container">
-                <Form id="login-form-container">
-                    <Form.Group controlId="formBasicEmail"> 
-                        <Form.Label htmlFor="exampleInputEmail1">Email address</Form.Label>
-                        <Form.Control value={this.state.email} onChange={this.handleChange} type="email" name="email"  
-                            placeholder="Enter email" />
-                        <small id="emailHelp" className="form-text">
-                            We'll never share your email with anyone else.
-                        </small>
-                    </Form.Group>
-                    <Form.Group className="form-group">
-                        <Form.Label htmlFor="exampleInputPassword1">Password</Form.Label>
-                        <Form.Control value={this.state.password} onChange={this.handleChange} type="password" name="password" 
-                            className="form-control" id="exampleInputPassword1" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group className="form-button">
-                        <Button type="submit" onClick={this.login} className="btn btn-primary">Login</Button>
-                        <Button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">Signup</Button>
-                    </Form.Group>
-                </Form>
+                <div className="bg-overlay">
+                    <img src={title} className="title" ></img>
+                    <img src={subtitle} className="subtitle" ></img>
+                    <Form id="login-form-container">
+                        <Form.Group controlId="formBasicEmail"> 
+                            <Form.Label htmlFor="exampleInputEmail1">Email address</Form.Label>
+                            <Form.Control value={this.state.email} onChange={this.handleChange} type="email" name="email"  
+                                placeholder="Enter email" />
+                            <small id="emailHelp" className="form-text">
+                                We'll never share your email with anyone else.
+                            </small>
+                        </Form.Group>
+                        <Form.Group className="form-group">
+                            <Form.Label htmlFor="exampleInputPassword1">Password</Form.Label>
+                            <Form.Control value={this.state.password} onChange={this.handleChange} type="password" name="password" 
+                                className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                        </Form.Group>
+                        <Form.Group className="form-button">
+                            <Button type="submit" onClick={this.login} className="btn btn-primary">Login</Button>
+                            <Button onClick={this.signup} style={{marginLeft: '25px'}} className="btn btn-success">Signup</Button>
+                        </Form.Group>
+                    </Form>
+                </div>
             </div>
         );
     }

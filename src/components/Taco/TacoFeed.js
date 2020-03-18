@@ -3,14 +3,13 @@ import './Taco.css';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
-function TacoFeed() {
-  const [tacos, setTacos] = useState([]);
-
+function TacoFeed(props) {
+  const [ tacos, setTacos ] = useState([]);
+ 
   useEffect(() => {
     getAllTacos();
   }, []);
@@ -41,11 +40,7 @@ function TacoFeed() {
     return array;
   }
 
-  const getPollo = () => {
-    
-  }
-
-  const tacoInfo = () => 
+  const listTacos = () => 
     shuffleTacos(tacos).map(taco => (
       <div id="taco-feed-container" key={taco.id}>
         <CardGroup style={{ width: '18rem' }}>
@@ -64,7 +59,9 @@ function TacoFeed() {
     )
   );
 
-  console.log({tacos})
+  function filterTacos() {
+
+  }
 
   return (
     <div>
@@ -72,15 +69,15 @@ function TacoFeed() {
         <h4 id="taco-filter-title">Tacos available in your area</h4>
         <ButtonGroup>
           <DropdownButton as={ButtonGroup} title="Proteins" id="bg-nested-dropdown">
-            <Dropdown.Item eventKey="1">Pollo</Dropdown.Item>
-            <Dropdown.Item eventKey="2">Carne Asada</Dropdown.Item>
-            <Dropdown.Item eventKey="3">Mariscos</Dropdown.Item>
-            <Dropdown.Item eventKey="4">Vegetariana</Dropdown.Item>
-            <Dropdown.Item eventKey="5">All</Dropdown.Item>
+            <Dropdown.Item onClick={ () => filterTacos() } eventKey="1">Pollo</Dropdown.Item>
+            <Dropdown.Item onClick={ () => filterTacos() } eventKey="2">Carne Asada</Dropdown.Item>
+            <Dropdown.Item onClick={ () => filterTacos() } eventKey="3">Mariscos</Dropdown.Item>
+            <Dropdown.Item onClick={ () => filterTacos() } eventKey="4">Vegetariana</Dropdown.Item>
+            <Dropdown.Item onClick={ () => filterTacos() } eventKey="5">All</Dropdown.Item>
           </DropdownButton>
         </ButtonGroup>
       </div>
-      <Container id="taco-feed-container" >{tacoInfo()}</Container>
+      <Container id="taco-feed-container" >{listTacos()}</Container>
     </div>
   );
 }
