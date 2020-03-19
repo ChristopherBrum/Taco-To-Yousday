@@ -16,8 +16,9 @@
   margin: 0 -7vh;
 }
 
-#filter-button-wrap {
+div#filter-button-wrap {
   margin-right: -5vh;
+  width: 150px;
 }
 
 #cards {

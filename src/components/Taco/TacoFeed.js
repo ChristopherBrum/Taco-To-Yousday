@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
-function TacoFeed() {
+function TacoFeed(props) {
   const [ tacos, setTacos ] = useState([]);
   const [ origTacos, setOrigTacos ] = useState([])
  
@@ -54,7 +54,7 @@ function TacoFeed() {
                 <Card.Text>{taco.description}</Card.Text>
               </div>
               <div>
-                <Button>I want this taco!</Button>
+                <Button onClick={() => props.addTaco(taco)}>I want this taco!</Button>
               </div>
             </Card.Body>
           </Card>
@@ -84,9 +84,10 @@ function TacoFeed() {
   return (
     <div className="main-taco-cont">
       <div className="filter-button-container">
-        <h5 className="taco-filter-title">Choose some tacos from the selection below!</h5>
+        <h5 className="taco-filter-title">Choose some tacos from the choices below!</h5>
         <div id="filter-button-wrap">
           <ButtonGroup>
+            {/* <Button className="surprise-taco-button">Surpise Tacos!</Button> */}
             <DropdownButton as={ButtonGroup} title="Proteins" id="bg-nested-dropdown">
               <Dropdown.Item onClick={ () => filterTacos([2]) } eventKey="1">Pollo</Dropdown.Item>
               <Dropdown.Item onClick={ () => filterTacos([7]) } eventKey="2">Carne Asada</Dropdown.Item>

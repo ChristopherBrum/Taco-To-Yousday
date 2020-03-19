@@ -5,7 +5,11 @@ import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
-function Menu() {
+function Menu(props) {
+
+  function getPrice() {
+    
+  }
 
   return(
     <div className="menu-container">
@@ -27,11 +31,11 @@ function Menu() {
         <div className="taco-dropdown">
           <ButtonGroup>
             <DropdownButton as={ButtonGroup} title="How Many Tacos" id="taco-nested-dropdown">
-              <Dropdown.Item eventKey="1">Pequeño: 2 Tacos for $3.99</Dropdown.Item>
-              <Dropdown.Item eventKey="2">Medio: 3 Tacos for $4.99</Dropdown.Item>
-              <Dropdown.Item eventKey="3">Grande: 4 Tacos for $5.99</Dropdown.Item>
-              <Dropdown.Item eventKey="4">Gordi: 5 Tacos for $6.99</Dropdown.Item>
-              <Dropdown.Item eventKey="5">Familia: 10 Tacos for $12.99</Dropdown.Item>
+              <Dropdown.Item eventKey="1">Pequeño Meal: 2 Tacos for $3.99</Dropdown.Item>
+              <Dropdown.Item eventKey="2">Medio Meal: 3 Tacos for $4.99</Dropdown.Item>
+              <Dropdown.Item eventKey="3">Grande Meal: 4 Tacos for $5.99</Dropdown.Item>
+              <Dropdown.Item eventKey="4">Gordi Meal: 5 Tacos for $6.99</Dropdown.Item>
+              <Dropdown.Item eventKey="5">Familia Meal: 10 Tacos for $12.99</Dropdown.Item>
             </DropdownButton>
           </ButtonGroup>  
         </div>
@@ -45,7 +49,7 @@ function Menu() {
             </DropdownButton>
           </ButtonGroup>
         </div>
-        <h5 id="order-total">Tacos Chosen:</h5>
+  <h5 id="order-total">Tacos in Cart: {props.cart.length}</h5>
         <h5 id="order-total">Order Total: </h5>
       </div>
       <Button>Checkout</Button>

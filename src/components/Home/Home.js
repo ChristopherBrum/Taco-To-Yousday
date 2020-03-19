@@ -10,6 +10,15 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.logout = this.logout.bind(this);
+    this.state = {
+      cart: []
+    }
+  }
+
+  addToCart(taco) {
+    let copyCart = this.state.cart.slice()
+    copyCart.push(taco)
+    this.setState({ cart: copyCart})
   }
 
   logout() {
@@ -20,11 +29,11 @@ class Home extends Component {
     return(
       <div className="taco-container">
         <div>
-          <Tacos />
+          <Tacos addTaco={(t) => this.addToCart(t)} />
         </div>
         <div>
           <div id="menu-container">
-            <Menu />
+            <Menu cart={this.state.cart}/>
           </div>
           <div id="address-container">
             <Address />
