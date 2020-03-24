@@ -7,9 +7,9 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 
 function Menu(props) {
 
-  function getPrice() {
+  // function getPrice() {
     
-  }
+  // }
 
   return(
     <div className="menu-container">
@@ -49,7 +49,10 @@ function Menu(props) {
             </DropdownButton>
           </ButtonGroup>
         </div>
-  <h5 id="order-total">Tacos in Cart: {props.cart.length}</h5>
+        <div className="taco-menu-display">
+          <h5 id="order-total">Tacos in Cart: </h5>
+          <ul id="tacos-in-cart">{props.name}</ul>
+        </div>
         <h5 id="order-total">Order Total: </h5>
       </div>
       <Button>Checkout</Button>

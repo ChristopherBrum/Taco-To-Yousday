@@ -26,6 +26,17 @@
   color: black;
 }
 
+.taco-menu-display {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
 #order-total {
-  margin-top: 4%; 
+  width: 38%;
+}
+
+#tacos-in-cart {
+  width: 62%;
+  text-decoration: none;
 }

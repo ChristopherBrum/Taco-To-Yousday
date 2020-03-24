@@ -2,6 +2,7 @@
   background-image: linear-gradient(#3ca55c,#b5ac49);
   display: flex;
   margin-left: -7.5px;
+  width: fit-content  ;
 }
 
 .home-title-container {
@@ -78,4 +79,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.taco-name-li {
+  text-decoration: none;
 }

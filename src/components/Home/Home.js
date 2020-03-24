@@ -3,8 +3,8 @@ import fire from '../../config/Fire.js';
 import Tacos from '../Taco/TacoFeed.js';
 import Menu from '../Menu/Menu.js';
 import Address from '../Address/Address.js';
-import './Home.css'
 import Button from 'react-bootstrap/Button';
+import './Home.css'
 
 class Home extends Component {
   constructor(props) {
@@ -17,8 +17,19 @@ class Home extends Component {
 
   addToCart(taco) {
     let copyCart = this.state.cart.slice()
+
     copyCart.push(taco)
     this.setState({ cart: copyCart})
+  }
+
+  checkArr(arr) {
+    if(arr.length === 0){
+      return "Taco Cart Empty"
+    } else {
+      return arr.map(name => 
+        <li className="taco-name-li">{name.title}</li>
+      )
+    }
   }
 
   logout() {
@@ -33,7 +44,7 @@ class Home extends Component {
         </div>
         <div>
           <div id="menu-container">
-            <Menu cart={this.state.cart}/>
+            <Menu cart={this.state.cart} name={this.checkArr(this.state.cart)}/>
           </div>
           <div id="address-container">
             <Address />

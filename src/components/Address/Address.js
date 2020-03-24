@@ -17,7 +17,7 @@ function Address() {
 
   const listStates = (arr) =>
     arr.map(state => (
-      <option value={state} key={state.indexOf()}>{state}</option>
+      <option value={state}>{state}</option>
     )
   )
 
