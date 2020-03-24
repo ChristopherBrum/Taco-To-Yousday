@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import fire from './config/Fire.js';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home.js';
 import Login from './components/Login/Login.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import TacoLogo from './components/taco-solo.png';
 import TacoFont from './components/TacoToYousday-font.png';

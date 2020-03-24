@@ -1,5 +1,6 @@
 import React from 'react';
 import './Address.css';
+// import Map from './components/Map/Map.js';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
@@ -16,10 +17,9 @@ function Address() {
 
   const listStates = (arr) =>
     arr.map(state => (
-      <option value={state}>{state}</option>
+      <option value={state} key={state.indexOf()}>{state}</option>
     )
   )
-
 
   return (
     <div>
@@ -48,7 +48,6 @@ function Address() {
             <Form.Control as="select" value="Choose...">
               <option>Choose...</option>
               {listStates(states)}
-              console.log(states)
             </Form.Control>
           </Form.Group>
 
@@ -63,6 +62,7 @@ function Address() {
         </Button>
         </Form.Row>
       </Form>
+      {/* <Map /> */}
     </div>
   )
 }
