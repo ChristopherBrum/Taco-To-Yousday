@@ -57,7 +57,6 @@ class Login extends Component {
                     <img src={about} onClick={() => this.toggleAboutPopUp()} className="about" alt="link to what TTY is about" ></img>
                     {this.state.showAboutPopUp ?  
                         <AboutPopUp  
-                            text='Close'  
                             closePopup={this.toggleAboutPopUp}  
                         />  
                             : null  

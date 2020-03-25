@@ -2,14 +2,15 @@
   position: fixed;  
   width: 75%;  
   height: fit-content;  
-  top: 10vh;  
+  top: 0;  
   left: 0;  
   right: 0;  
   bottom: 0;  
   margin: auto;  
-  background-color: rgba(255, 255, 255, 0.75); 
+  background-color: rgba(255, 255, 255, 0.85); 
   border: 2px solid white; 
   border-radius: 5px;
+  padding: 10px;
 }  
 
 div.popup\_inner {  
@@ -38,6 +39,11 @@ div.popup\_inner {
 }
 
 .about-body {
+text-align: center;
+}
+
+.about-body-subtitle {
   text-align: center;
+  font-weight: bold;
 }
 

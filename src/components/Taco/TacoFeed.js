@@ -73,13 +73,13 @@ function TacoFeed(props) {
     }
   }
 
-  function filterAppetite() {
+  // function filterAppetite() {
 
-  }
+  // }
 
-  function filterFrequency() {
+  // function filterFrequency() {
 
-  }
+  // }
 
   return (
     <div className="main-taco-cont">

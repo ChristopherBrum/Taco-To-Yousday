@@ -10,12 +10,12 @@ class Popup extends React.Component {
         <div>
           <h1 className="about-headline">What is Taco To Yousday and How does it work?</h1>  
           <p className="about-body">
-            <strong>Taco To Yousday</strong> is a weekly Taco subscription service that brings Taco Tuesday to you, in the confort of your own home. 
+            <strong>Taco To Yousday</strong> is a weekly taco subscription service that brings Taco Tuesday to you, in the confort of your own home. 
             Everybody loves tacos and taco Tuesday is a huge tradicion for many. 
             Unfortunately going out after a long day of working can be more work than it's worth.
             That's where <strong>Taco To Yousday</strong> comes in and makes your Tuesday nights a whole lot yummier.
           </p>
-          <p className="about-body">Getting started is easy:</p>
+          <p className="about-body-subtitle">Getting started is easy:</p>
             <ol>
               <li>Simply sign up with your email</li> 
               <li>Add your address where you would like your tacos delivered</li>
