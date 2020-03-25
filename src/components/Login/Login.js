@@ -43,9 +43,9 @@ class Login extends Component {
     }
 
     toggleAboutPopUp() {  
-        this.setState({  
-            showAboutPopUp: !this.state.showAboutPopUp  
-        });  
+        this.setState( state => ({  
+            showAboutPopUp: !state.showAboutPopUp  
+        }));  
     }  
 
     render() {
@@ -54,11 +54,11 @@ class Login extends Component {
                 <div className="bg-overlay">
                     <img src={title} className="title" alt="website logo"></img>
                     <img src={subtitle} className="subtitle" alt="website subtitle"></img>
-                    <img src={about} onClick={() => {this.toggleAboutPopUp()}} className="about" alt="link to what TTY is about"></img>
+                    <img src={about} onClick={() => this.toggleAboutPopUp()} className="about" alt="link to what TTY is about" ></img>
                     {this.state.showAboutPopUp ?  
                         <AboutPopUp  
-                            text='Click "Close Button" to hide popup'  
-                            closePopup={this.toggleAboutPopUp()}  
+                            text='Close'  
+                            closePopup={this.toggleAboutPopUp}  
                         />  
                             : null  
                     }  
