@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import title from '../Images/TacoToYousday-font.png';
 import subtitle from '../Images/slogan-font.png';
 import about from '../Images/what-is-TTY.png';
+import AboutPopUp from '../AboutPopUp/AboutPopUp.js';  
 
 class Login extends Component {
     constructor(props) {
@@ -15,8 +16,10 @@ class Login extends Component {
         this.signup= this.signup.bind(this);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            showAboutPopUp: false,
         }   
+        this.toggleAboutPopUp = this.toggleAboutPopUp.bind(this);
     }
 
     login(e){
@@ -39,13 +42,26 @@ class Login extends Component {
         this.setState({ [e.target.name]: e.target.value});
     }
 
+    toggleAboutPopUp() {  
+        this.setState({  
+            showAboutPopUp: !this.state.showAboutPopUp  
+        });  
+    }  
+
     render() {
         return (
             <div className="landing-container">
                 <div className="bg-overlay">
                     <img src={title} className="title" alt="website logo"></img>
                     <img src={subtitle} className="subtitle" alt="website subtitle"></img>
-                    <img src={about} className="about" alt="link to what TTY is about"></img>
+                    <img src={about} onClick={() => {this.toggleAboutPopUp()}} className="about" alt="link to what TTY is about"></img>
+                    {this.state.showAboutPopUp ?  
+                        <AboutPopUp  
+                            text='Click "Close Button" to hide popup'  
+                            closePopup={this.toggleAboutPopUp()}  
+                        />  
+                            : null  
+                    }  
                     <Form id="login-form-container">
                         <Form.Group controlId="formBasicEmail"> 
                             <Form.Label htmlFor="exampleInputEmail1">Email address</Form.Label>
