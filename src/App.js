@@ -5,8 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home.js';
 import Login from './components/Login/Login.js';
 import Navbar from 'react-bootstrap/Navbar';
-import TacoLogo from './components/taco-solo.png';
-import TacoFont from './components/TacoToYousday-font.png';
+import TacoLogo from './components/Images/taco-solo.png';
+import TacoFont from './components/Images/TacoToYousday-font.png';
 
 class App extends Component {
   constructor(props){

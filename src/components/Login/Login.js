@@ -3,9 +3,9 @@ import fire from '../../config/Fire.js';
 import './Login.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import title from '../TacoToYousday-font.png';
-import subtitle from '../slogan-font.png';
-import about from '../what-is-TTY.png';
+import title from '../Images/TacoToYousday-font.png';
+import subtitle from '../Images/slogan-font.png';
+import about from '../Images/what-is-TTY.png';
 
 class Login extends Component {
     constructor(props) {
