@@ -1,13 +1,13 @@
 import React from 'react';  
-import './AboutPopUp.css';  
 import Button from 'react-bootstrap/Button';
+import './AboutPopUp.css';  
 
 function Popup() {  
   return (  
     <div className='popup'>  
       <div className='popup\_inner'>  
         <div>
-          <h1 className="about-headline">What is Taco To Yousday and How does it work?</h1>  
+          <h1 className="headline">What is Taco To Yousday and How does it work?</h1>  
           <p className="about-body">
             <strong>Taco To Yousday</strong> is a weekly taco subscription service that brings Taco Tuesday to you, in the confort of your own home. 
             Everybody loves tacos and taco Tuesday is a huge tradicion for many. 

@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import title from '../Images/TacoToYousday-font.png';
 import subtitle from '../Images/slogan-font.png';
 import about from '../Images/what-is-TTY.png';
-import AboutPopUp from '../AboutPopUp/AboutPopUp.js';  
+import AboutPopUp from '../Popups/AboutPopUp.js';  
 
 class Login extends Component {
     constructor(props) {

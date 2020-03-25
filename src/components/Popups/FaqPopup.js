@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import './FaqPopup.css';
 
 function FaqPopup(props) {
 

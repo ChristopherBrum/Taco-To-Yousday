@@ -4,9 +4,10 @@ import Tacos from '../Taco/TacoFeed.js';
 import Menu from '../Menu/Menu.js';
 import Address from '../Address/Address.js';
 import Button from 'react-bootstrap/Button';
-import FaqPopup from '../FaqPopup/FaqPopup.js';
-import AboutPopUp from '../AboutPopUp/AboutPopUp.js';  
-import AboutPopup2 from '../AboutPopup2/AboutPopup2.js';
+import FaqPopup from '../Popups/FaqPopup.js';
+import AboutPopUp from '../Popups/AboutPopUp.js';  
+import AboutPopup2 from '../Popups/AboutPopup2.js';
+import ContactPopup from '../Popups/ContactPopup.js'
 import './Home.css'
 
 class Home extends Component {
@@ -15,6 +16,7 @@ class Home extends Component {
     this.logout = this.logout.bind(this);
     this.toggleFaqPopup = this.toggleFaqPopup.bind(this);
     this.toggleAboutPopup2 = this.toggleAboutPopup2.bind(this);
+    this.toggleContactPopup = this.toggleContactPopup.bind(this);
     this.state = {
       cart: []
     }
@@ -52,6 +54,12 @@ class Home extends Component {
       showAboutPopup2: !state.showAboutPopup2 
     }));  
   }
+
+  toggleContactPopup() {
+    this.setState( state => ({  
+      showContactPopup: !state.showContactPopup 
+    }));  
+  }
   
   render() {
     return(
@@ -71,7 +79,8 @@ class Home extends Component {
               {this.state.showFaqPopup ? <FaqPopup closePopup={this.toggleFaqPopup} /> : null }  
             <Button className="logout-button" onClick={() => this.toggleAboutPopup2()}>About Taco To Yousday</Button>
               {this.state.showAboutPopup2 ? <AboutPopup2 closePopup={this.toggleAboutPopup2} /> : null } 
-            <Button className="logout-button">Contact</Button>
+            <Button className="logout-button" onClick={() => this.toggleContactPopup()}>Contact</Button>
+              {this.state.showContactPopup ? <ContactPopup closePopup={this.toggleContactPopup} /> : null } 
             <Button className="logout-button" onClick={this.logout}>Log Out</Button>
           </div>
         </div>
