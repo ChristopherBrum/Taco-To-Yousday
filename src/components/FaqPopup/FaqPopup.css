@@ -1,4 +1,4 @@
-.popup {  
+/* .faq-popup {  
   position: fixed;  
   width: 75%;  
   height: fit-content;  
@@ -13,7 +13,7 @@
   padding: 10px;
 }  
 
-div.popup\_inner {  
+div.faq-popup-inner {  
   position: absolute;  
   left: 25%;  
   right: 25%;  
@@ -21,29 +21,12 @@ div.popup\_inner {
   bottom: 25%;  
   margin: auto;  
   border-radius: 20px;  
-  background: white; 
-}
+  background-color: white; 
+} */
 
-.popup-close-button {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5vh;
-}
-
-.about-headline {
+.headline {
   margin-top: 5vh;
   font-size: 1rem;
   text-align: center;
   font-weight: bold;
 }
-
-.about-body {
-text-align: center;
-}
-
-.about-body-subtitle {
-  text-align: center;
-  font-weight: bold;
-}
-

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { GoogleMap, LoadScript } from '@react-google-maps/api'
+import '/Map.css';
 
 class Map extends Component {
   render() {

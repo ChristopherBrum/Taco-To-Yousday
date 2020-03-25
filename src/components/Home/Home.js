@@ -4,12 +4,17 @@ import Tacos from '../Taco/TacoFeed.js';
 import Menu from '../Menu/Menu.js';
 import Address from '../Address/Address.js';
 import Button from 'react-bootstrap/Button';
+import FaqPopup from '../FaqPopup/FaqPopup.js';
+import AboutPopUp from '../AboutPopUp/AboutPopUp.js';  
+import AboutPopup2 from '../AboutPopup2/AboutPopup2.js';
 import './Home.css'
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.logout = this.logout.bind(this);
+    this.toggleFaqPopup = this.toggleFaqPopup.bind(this);
+    this.toggleAboutPopup2 = this.toggleAboutPopup2.bind(this);
     this.state = {
       cart: []
     }
@@ -36,6 +41,18 @@ class Home extends Component {
     fire.auth().signOut();
   }
   
+  toggleFaqPopup() {
+    this.setState( state => ({  
+      showFaqPopup: !state.showFaqPopup 
+    }));  
+  }
+
+  toggleAboutPopup2() {
+    this.setState( state => ({  
+      showAboutPopup2: !state.showAboutPopup2 
+    }));  
+  }
+  
   render() {
     return(
       <div className="taco-container">
@@ -50,8 +67,10 @@ class Home extends Component {
             <Address />
           </div>
           <div id="settings-container">
-            <Button className="logout-button">FAQ</Button>
-            <Button className="logout-button">About Taco To Yousday</Button>
+            <Button className="logout-button" onClick={() => this.toggleFaqPopup()}>FAQ</Button>
+              {this.state.showFaqPopup ? <FaqPopup closePopup={this.toggleFaqPopup} /> : null }  
+            <Button className="logout-button" onClick={() => this.toggleAboutPopup2()}>About Taco To Yousday</Button>
+              {this.state.showAboutPopup2 ? <AboutPopup2 closePopup={this.toggleAboutPopup2} /> : null } 
             <Button className="logout-button">Contact</Button>
             <Button className="logout-button" onClick={this.logout}>Log Out</Button>
           </div>
