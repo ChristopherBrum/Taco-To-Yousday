@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import './AboutPopUp.css';  
 
-function Popup() {  
+function Popup(props) {  
   return (  
     <div className='popup'>  
       <div className='popup\_inner'>  
@@ -25,7 +25,7 @@ function Popup() {
             </ol>
             <p className="about-body">Then, kick back and wait for Taco Tuesday to come to you</p>        
         </div>
-        <Button className="about-popup-close-button" onClick={this.props.closePopup}>Close</Button>  
+        <Button className="popup-close-button" onClick={props.closePopup}>Close</Button>  
       </div>  
     </div>  
   );  
