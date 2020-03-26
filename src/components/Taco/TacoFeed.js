@@ -80,7 +80,7 @@ function TacoFeed(props) {
         <div id="filter-button-wrap">
           <ButtonGroup>
             {/* <Button className="surprise-taco-button">Surpise Tacos!</Button> */}
-            <DropdownButton as={ButtonGroup} title="Proteins" id="bg-nested-dropdown">
+            <DropdownButton as={ButtonGroup} title="Taco Filters" id="bg-nested-dropdown">
               <Dropdown.Item onClick={ () => filterTacos([2]) } eventKey="1">Pollo</Dropdown.Item>
               <Dropdown.Item onClick={ () => filterTacos([7]) } eventKey="2">Carne Asada</Dropdown.Item>
               <Dropdown.Item onClick={ () => filterTacos([3,4,5]) } eventKey="3">Mariscos</Dropdown.Item>

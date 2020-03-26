@@ -15,7 +15,7 @@ function Popup(props) {
             That's where <strong>Taco To Yousday</strong> comes in and makes your Tuesday nights a whole lot yummier.
           </p>
           <p className="about-body-subtitle">Getting started is easy:</p>
-            <ol>
+            <ol className="about-popup-ol">
               <li>Simply sign up with your email</li> 
               <li>Add your address where you would like your tacos delivered</li>
               <li>Choose from the different tacos available in your area</li>
