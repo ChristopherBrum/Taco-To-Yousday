@@ -12,7 +12,7 @@
 
 #menu-container {
   width: 60vh;
-  height: 60vh;
+  height: fit-content;
   background-color: rgb(255, 255, 255, 0.5);
   margin-top: 20px;
   margin-bottom: 10px;

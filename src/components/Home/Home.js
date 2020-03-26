@@ -5,7 +5,6 @@ import Menu from '../Menu/Menu.js';
 import Address from '../Address/Address.js';
 import Button from 'react-bootstrap/Button';
 import FaqPopup from '../Popups/FaqPopup.js';
-import AboutPopUp from '../Popups/AboutPopUp.js';  
 import AboutPopup2 from '../Popups/AboutPopup2.js';
 import ContactPopup from '../Popups/ContactPopup.js'
 import './Home.css'
@@ -24,7 +23,6 @@ class Home extends Component {
 
   addToCart(taco) {
     let copyCart = this.state.cart.slice()
-
     copyCart.push(taco)
     this.setState({ cart: copyCart})
   }
@@ -69,7 +67,7 @@ class Home extends Component {
         </div>
         <div>
           <div id="menu-container">
-            <Menu cart={this.state.cart} name={this.checkArr(this.state.cart)}/>
+            <Menu cart={this.state.cart} name={this.checkArr(this.state.cart)} addTaco={(t) => this.addToCart(t)} />
           </div>
           <div id="address-container">
             <Address />

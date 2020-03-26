@@ -26,14 +26,24 @@
   color: black;
 }
 
+.taco-menu-options-container {
+  margin: 20px 0;
+}
+
 .taco-menu-display {
   width: 100%;
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 #order-total {
-  width: 38%;
+  width: 40%;
+  font-weight: bold;
+}
+
+#order-total-real {
+  width: 100%;
+  font-weight: bold;
 }
 
 #tacos-in-cart {

@@ -30,20 +30,20 @@ function TacoFeed(props) {
     }
   }
 
-  function shuffleTacos(array) {
-    let currentIndex = array.length, temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-    return array;
-  }
+  // function shuffleTacos(array) {
+  //   let currentIndex = array.length, temporaryValue, randomIndex;
+  //   while (0 !== currentIndex) {
+  //     randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex -= 1;
+  //     temporaryValue = array[currentIndex];
+  //     array[currentIndex] = array[randomIndex];
+  //     array[randomIndex] = temporaryValue;
+  //   }
+  //   return array;
+  // }
 
   const listTacos = () => 
-    shuffleTacos(tacos).map(taco => (
+    tacos.map(taco => (
       <div id="taco-feed-container" key={taco.id}>
         <CardGroup id="cards" style={{ width: '18rem' }}>
           <Card>
@@ -72,14 +72,6 @@ function TacoFeed(props) {
       setTacos(filterTacos)
     }
   }
-
-  // function filterAppetite() {
-
-  // }
-
-  // function filterFrequency() {
-
-  // }
 
   return (
     <div className="main-taco-cont">
