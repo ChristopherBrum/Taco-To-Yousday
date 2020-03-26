@@ -23,7 +23,7 @@ function Popup(props) {
               <li>Choose how often you would like <strong>Taco To Yousday</strong> deliveries</li>
               <li>Click the checkout button to complete your subscription</li>
             </ol>
-            <p className="about-body">Then, kick back and wait for Taco Tuesday to come to you</p>        
+            <p className="about-body">Then kick back and wait for Taco Tuesday to come to you</p>        
         </div>
         <Button className="popup-close-button" onClick={props.closePopup}>Close</Button>  
       </div>  
