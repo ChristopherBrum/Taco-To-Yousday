@@ -1,6 +1,6 @@
 import React from 'react';
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 import './Address.css';
-// import Map from './components/Map/Map.js';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
@@ -13,13 +13,21 @@ const states = [ "AK - Alaska", "AL - Alabama", "AR - Arkansas", "AS - American 
 "SD - South Dakota", "TN - Tennessee", "TX - Texas", "UT - Utah", "VA - Virginia", "VI - Virgin Islands", "VT - Vermont", "WA - Washington", 
 "WI - Wisconsin", "WV - West Virginia", "WY - Wyoming"]
 
-function Address() {  
+function Address(props) {  
 
   const listStates = (arr) =>
     arr.map(state => (
       <option value={state}>{state}</option>
     )
   )
+
+  const mapStyles = {
+    height: '250px',
+    width: '335px',
+    marginTop: '20px',
+    display: 'flex',
+    justifyContent: 'center'
+  }
 
   return (
     <div>
@@ -62,9 +70,15 @@ function Address() {
         </Button>
         </Form.Row>
       </Form>
-      {/* <Map /> */}
+      <Map
+        google={props.google}
+        zoom={8}
+        style={mapStyles}
+        initialCenter={{ lat: 37.804363, lng: -122.271111}}
+      />
     </div>
   )
 }
-
-export default Address;
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyDNBi-BoOSmcefefjy27L0HCv2p_Y7F4xU'
+})(Address);
