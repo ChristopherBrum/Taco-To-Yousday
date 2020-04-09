@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import Maps from '../GoogleMaps/GoogleMaps';  
 import './Address.css';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
@@ -20,14 +20,6 @@ function Address(props) {
       <option value={state}>{state}</option>
     )
   )
-
-  const mapStyles = {
-    height: '250px',
-    width: '335px',
-    marginTop: '20px',
-    display: 'flex',
-    justifyContent: 'center'
-  }
 
   return (
     <div>
@@ -70,15 +62,8 @@ function Address(props) {
         </Button>
         </Form.Row>
       </Form>
-      <Map
-        google={props.google}
-        zoom={8}
-        style={mapStyles}
-        initialCenter={{ lat: 37.804363, lng: -122.271111}}
-      />
+      <Maps />
     </div>
   )
 }
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDNBi-BoOSmcefefjy27L0HCv2p_Y7F4xU'
-})(Address);
+export default Address;
