@@ -62,7 +62,9 @@ function Address(props) {
         </Button>
         </Form.Row>
       </Form>
-      <Maps />
+      {/* <div id="maps-container">
+        <Maps />
+      </div> */}
     </div>
   )
 }
