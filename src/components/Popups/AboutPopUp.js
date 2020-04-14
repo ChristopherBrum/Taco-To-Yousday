@@ -9,9 +9,9 @@ function Popup(props) {
         <div>
           <h1 className="headline">What is Taco To Yousday and How does it work?</h1>  
           <p className="about-body">
-            <strong>Taco To Yousday</strong> is a weekly taco subscription service that brings Taco Tuesday to you, in the confort of your own home. 
-            Everybody loves tacos and taco Tuesday is a huge tradicion for many. 
-            Unfortunately going out after a long day of working can be more work than it's worth.
+            <strong>Taco To Yousday</strong> is a weekly taco subscription service that brings Taco Tuesday to you, in the comfort of your own home. 
+            Everybody loves tacos and taco Tuesday is a huge tradition for many. 
+            Sometimes going out after a long day can be more work than it's worth.
             That's where <strong>Taco To Yousday</strong> comes in and makes your Tuesday nights a whole lot yummier.
           </p>
           <p className="about-body-subtitle">Getting started is easy:</p>
