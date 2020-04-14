@@ -4,10 +4,10 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Checkout from '../Checkout/Checkout.js';
+// import Checkout from '../Checkout/Checkout.js';
 import { useEffect } from 'react';
-import { Redirect } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function Menu(props) { 
   const [tacoPlanAmount, setTacoPlanAmount] = useState(0);
@@ -44,8 +44,8 @@ function Menu(props) {
   }
 
   const calcTotal = () => {
-    let calc = (tacoPlanAmount * tacoPlanFrequencyAmount)
-    let monthlyTotal = calc.toString()
+    // let calc = (tacoPlanAmount * tacoPlanFrequencyAmount)
+    // let monthlyTotal = calc.toString()
     setOrderTotal(tacoPlanAmount * tacoPlanFrequencyAmount)  
   }
 
