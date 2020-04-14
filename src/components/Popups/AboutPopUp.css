@@ -51,3 +51,15 @@ text-align: center;
   margin-left: 28%;
 }
 
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 400px) {
+  .popup {  
+    width: 90%;
+    margin-right: 30px;
+  } 
+
+  .about-popup-ol {
+    margin-left: 10px;
+  }
+}
