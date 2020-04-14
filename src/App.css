@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 nav#nav-props.bg-light.navbar.navbar-expand.navbar-light {
   display: flex;
   justify-content: center;

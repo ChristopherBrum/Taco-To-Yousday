@@ -15,6 +15,7 @@ function Popup(props) {
             That's where <strong>Taco To Yousday</strong> comes in and makes your Tuesday nights a whole lot yummier.
           </p>
           <p className="about-body-subtitle">Getting started is easy:</p>
+          <div className="ol-div">
             <ol className="about-popup-ol">
               <li>Simply sign up with your email</li> 
               <li>Add your address where you would like your tacos delivered</li>
@@ -23,7 +24,8 @@ function Popup(props) {
               <li>Choose how often you would like <strong>Taco To Yousday</strong> deliveries</li>
               <li>Click the checkout button to complete your subscription</li>
             </ol>
-            <p className="about-body">Then kick back and wait for Taco Tuesday to come to you</p>        
+          </div>
+          <p className="about-body">Then kick back and wait for Taco Tuesday to come to you</p>        
         </div>
         <Button className="popup-close-button" onClick={props.closePopup}>Close</Button>  
       </div>  

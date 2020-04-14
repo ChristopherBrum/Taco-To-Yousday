@@ -1,8 +1,8 @@
 .popup {  
   position: fixed;  
-  width: 75%;  
+  width: 85%;  
   height: fit-content;  
-  top: 0;  
+  top: 25px;  
   left: 0;  
   right: 0;  
   bottom: 0;  
@@ -47,7 +47,36 @@ text-align: center;
   font-weight: bold;
 }
 
-.about-popup-ol {
-  margin-left: 28%;
+.ol-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
+.about-popup-ol {
+  width: 50%;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 700px) {
+  .popup {  
+    width: 96%;
+    height: 92%;
+    overflow: scroll;
+  } 
+
+  .about-popup-ol {
+    width: 90%;  
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .popup {  
+    width: 92%;
+  } 
+
+  .about-popup-ol {
+    margin-left: 10px;
+  }
+}
