@@ -33,22 +33,39 @@
 }
 
 .title {
-  width: 60%;
+  width: 80%;
+  margin-top: -20px;
 }
 
 .subtitle {
-  width: 30%;
+  width: 40%;
   margin-top: -4%;
 }
 
 .about {
-  width: 15%;
-  margin-top: -1%;
+  width: 20%;
+  margin-top: 20px;
   margin-bottom: 1%;
   cursor: pointer;
 }
 
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 700px) {
+  img.title {
+    width: 80%;
+    margin-top: -50px;
+  }
+
+  .subtitle {
+    width: 50%;
+  }
+
+  .about {
+    width: 35%;
+    cursor: pointer;
+  }
+}
 
 @media screen and (max-width: 400px) {
 
@@ -59,16 +76,21 @@
 
   img.title {
     width: 96%;
-    margin-top: -100px;
+    margin-top: -80px;
   }
 
   .subtitle {
-    width: 80%;
+    width: 90%;
   }
 
   .about {
-    width: 60%;
-    padding: 40px 0px 24px;
+    width: 65%;
+    padding: 12px 0px 16px;
     cursor: pointer;
   }
+
+  #login-form-container {
+    width: 92%;
+  }
 }
+
